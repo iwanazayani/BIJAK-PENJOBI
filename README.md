@@ -1,1 +1,0 @@
-# BIJAK-PENJOBI
