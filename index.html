@@ -29,7 +29,6 @@
 }
   
 #permainan .art {
-  background: url('./gambar-jobi.png.PNG') center / cover no-repeat !important;
   font-size: 0 !important;
 }
 
@@ -87,6 +86,10 @@
   display: block;
 }
 
+#permainan #gameGrid .card:nth-child(2) .art {
+  background: url('./gambar-penjobi-strike.png.PNG') center / cover no-repeat !important;
+  font-size: 0 !important;
+}
 </style>
 </head>
 <body>
@@ -137,6 +140,7 @@ const permainan = [
     kategori: 'Pengembaraan',
     penerangan: 'Terokai dunia penjodoh bilangan melalui misi interaktif!',
     emoji: '🚀',
+    gambar: 'gambar-jobi.png.PNG',
     pautan: 'https://jobi-quest.netlify.app'
   },
   {
@@ -144,6 +148,7 @@ const permainan = [
     kategori: 'Hand Gesture',
     penerangan: 'Cari 5 PenJoBi dan jawab 15 soalan menggunakan gerakan jari melalui kamera.',
     emoji: '🖐️',
+    gambar: 'gambar-penjobi-strike.png.PNG',
     pautan: 'https://penjobi-strike-v2.vercel.app'
   }
 ];
