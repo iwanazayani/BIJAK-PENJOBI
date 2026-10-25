@@ -37,22 +37,6 @@
   display: none !important;
 }
   
-const permainan = [
-  {
-    tajuk: 'Jobi Quest',
-    kategori: 'Pengembaraan',
-    penerangan: 'Terokai dunia penjodoh bilangan melalui misi interaktif!',
-    emoji: '🚀',
-    pautan: 'https://jobi-quest.netlify.app'
-  },
-  {
-    tajuk: 'PENJOBI STRIKE',
-    kategori: 'Hand Gesture',
-    penerangan: 'Cari 5 penjodoh bilangan dan jawab 15 soalan menggunakan kamera.',
-    emoji: '🖐️',
-    pautan: 'https://penjobi-strike-v2.vercel.app'
-  }
-];
 .maklumat-belajar {
   margin: 30px 0;
   padding: 24px;
@@ -146,17 +130,24 @@ const erph = [
   {tajuk:'e-RPH Penjodoh Bilangan',penerangan:'Rancangan pengajaran harian Bahasa Melayu.',emoji:'📘',pautan:'https://docs.google.com/document/d/17VkAtRx-vangcZwnGK5MxEsxWNSHE23oyw6npt_Y-XU/edit?usp=sharing'}
 ];
 // EDIT DI SINI: Tambah permainan baharu dengan menyalin satu baris objek.
+
 const permainan = [
-  {tajuk:'Jobi Quest',kategori:'Pengembaraan',penerangan:'Terokai dunia penjodoh bilangan melalui misi interaktif!',emoji:'🚀',pautan:'https://jobi-quest.netlify.app'}
+  {
+    tajuk: 'Jobi Quest',
+    kategori: 'Pengembaraan',
+    penerangan: 'Terokai dunia penjodoh bilangan melalui misi interaktif!',
+    emoji: '🚀',
+    pautan: 'https://jobi-quest.netlify.app'
+  },
+  {
+    tajuk: 'PENJOBI STRIKE',
+    kategori: 'Hand Gesture',
+    penerangan: 'Cari 5 PenJoBi dan jawab 15 soalan menggunakan gerakan jari melalui kamera.',
+    emoji: '🖐️',
+    pautan: 'https://penjobi-strike-v2.vercel.app'
+  }
 ];
-  
-{
-  tajuk: 'PENJOBI STRIKE',
-  kategori: 'Hand Gesture',
-  penerangan: 'Cari 5 PenJoBi dan jawab 15 soalan menggunakan gerakan jari melalui kamera.',
-  emoji: '🖐️',
-  pautan: 'https://penjobi-strike-v2.vercel.app'
-}
+
 function el(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt)x.textContent=txt;return x}
 function card(item,jenis){const article=el('article','card');const art=el('div','art',item.emoji||'🎮');art.setAttribute('aria-hidden','true');article.append(art);const body=el('div','card-body');if(item.kategori)body.append(el('span','pill',item.kategori));body.append(el('h3','',item.tajuk),el('p','',item.penerangan));const a=el('a','btn',item.pautan&&item.pautan!=='#'?(jenis==='e-RPH'?'BUKA e-RPH':'MAIN SEKARANG'):'PAUTAN BELUM DIMASUKKAN');if(item.pautan&&item.pautan!=='#'){a.href=item.pautan;a.target='_blank';a.rel='noopener noreferrer'}else{a.setAttribute('aria-disabled','true');a.style.opacity='.6';a.style.pointerEvents='none'}body.append(a);article.append(body);return article}
 const egrid=document.getElementById('erphGrid');erph.forEach(item=>egrid.append(card(item,'e-RPH')));
